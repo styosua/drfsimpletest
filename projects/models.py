@@ -1,10 +1,8 @@
-from django.db import models
+from django.db import models # type: ignore
 
 # Create your models here.
-class Project(models.Model):
+class Project (models.Model):
     titulo = models.CharField(max_length=200)
-    descripcion = models.CharField()
-    tecnologia = models.TextField(max_length=200)
+    descripcion = models.TextField()
+    tecnologia = models.CharField(max_length=200)
     f_creacion = models.DateTimeField(auto_now_add=True)
-    
-    
